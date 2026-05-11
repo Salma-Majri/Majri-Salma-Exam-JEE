@@ -1,4 +1,5 @@
 package com.salma.majri.enums;
 
-public class TypeCarburant {
+public enum TypeCarburant {
+    ESSENCE, DIESEL, HYBRIDE, ELECTRIQUE
 }

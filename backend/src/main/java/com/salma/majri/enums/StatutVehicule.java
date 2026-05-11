@@ -1,4 +1,5 @@
 package com.salma.majri.enums;
 
-public class StatutVehicule {
+public enum StatutVehicule {
+    DISPONIBLE, LOUE, EN_MAINTENANCE
 }

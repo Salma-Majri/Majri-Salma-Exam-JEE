@@ -1,4 +1,5 @@
 package com.salma.majri.enums;
 
-public class TypeMoto {
+public enum TypeMoto {
+    SPORTIVE, SCOOTER, ROADSTER, TOURING
 }
