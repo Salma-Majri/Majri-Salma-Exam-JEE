@@ -5,6 +5,8 @@ import com.salma.majri.dtos.LocationDTO;
 import com.salma.majri.services.LocationService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import com.salma.majri.entities.Vehicule;
+import com.salma.majri.repositories.VehiculeRepository;
 import java.util.List;
 
 @RestController
@@ -14,6 +16,7 @@ import java.util.List;
 public class LocationRestController {
 
     private final LocationService locationService;
+    private final VehiculeRepository vehiculeRepository;
 
     @GetMapping("/agences")
     public List<AgenceDTO> getAgences() {
@@ -33,5 +36,11 @@ public class LocationRestController {
     @PostMapping("/locations")
     public LocationDTO createLocation(@RequestBody LocationDTO locationDTO) throws Exception {
         return locationService.createLocation(locationDTO);
+    }
+
+
+    @GetMapping("/vehicules")
+    public List<Vehicule> getVehicules() {
+        return vehiculeRepository.findAll();
     }
 }
